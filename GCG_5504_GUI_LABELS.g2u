@@ -1,0 +1,22 @@
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'000016
+'000020
+'000021
+'Created one script to set the labels on the GUI for speed purposes
+
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+	'GUI 1.0 populate hook
+	F.Intrinsic.Control.Case(15710)
+		V.Passed.000016.Set("Open Order")
+		V.Passed.000020.Set("Inventory")
+		V.Passed.000021.Set("Open PO")
+		
+	F.Intrinsic.Control.Case(49710)
+		V.Passed.MainFormView-windowsUIButtonPanel-1.Set("Open PO|~|Inventory|~|Open Order")
+		
+F.Intrinsic.Control.EndSelect
+Program.Sub.Main.End
